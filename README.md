@@ -1,5 +1,13 @@
 # Angular StoryBook Workshop
 
+## Getting started
+
+- Fork this repository
+- Clone your fork
+- Run `npm install`
+- Run `npm run storybook`
+- Open your browser at `http://localhost:6006`
+
 
 ## Resources
 
