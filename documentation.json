@@ -2631,6 +2631,16 @@
                 "defaultValue": "(\n  mockedRequest: ApiRequestMock,\n): HttpResponse<unknown> => {\n  return new HttpResponse(\n    mockedRequest.count !== undefined\n      ? {\n          status: mockedRequest.status || 200,\n          body: mockedRequest.response,\n          headers: new HttpHeaders().set(\n            'x-total-count',\n            `${mockedRequest.count}`,\n          ),\n        }\n      : {\n          status: mockedRequest.status || 200,\n          body: mockedRequest.response,\n        },\n  );\n}"
             },
             {
+                "name": "data",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/users/users-page/users-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  users: [\n    {\n      name: 'Sari Dillway',\n      age: 82,\n      email: 'sdillway0@ft.com',\n      company: 'Apple',\n      title: 'Desktop Support Technician',\n      department: 'Accounting',\n      createdAt: '10/16/2023',\n      updatedAt: '8/14/2023',\n      id: '4d5b9a1d-597c-4d1e-82be-02757836b226',\n    },\n    {\n      name: 'Konstance Dawson',\n      age: 84,\n      email: 'kdawson1@sakura.ne.jp',\n      company: 'Microsoft',\n      title: 'Assistant Media Planner',\n      department: 'Human Resources',\n      createdAt: '8/1/2023',\n      updatedAt: '7/12/2023',\n      id: '1ff5416e-8634-4b84-b5e1-1e16042cc8d8',\n    },\n    {\n      name: 'Kalindi Wonfar',\n      age: 84,\n      email: 'kwonfar2@elegantthemes.com',\n      company: 'Apple',\n      title: 'Desktop Support Technician',\n      department: 'Marketing',\n      createdAt: '2/16/2023',\n      updatedAt: '1/14/2023',\n      id: '80350fd5-525c-4a08-bd96-3c49fcacab16',\n    },\n    {\n      name: 'Konstance Dawson',\n      age: 84,\n      email: 'kdawson1@sakura.ne.jp',\n      company: 'Microsoft',\n      title: 'Assistant Media Planner',\n      department: 'Human Resources',\n      createdAt: '8/1/2023',\n      updatedAt: '7/12/2023',\n      id: '1ff5416e-8634-4b84-b5e1-1e16042cc8d8',\n    },\n  ],\n}"
+            },
+            {
                 "name": "DefaultOptions",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2717,6 +2727,16 @@
                 "defaultValue": "{\n  staleTime: 1000 * 5,\n  gcTime: 1000 * 120,\n}"
             },
             {
+                "name": "requests",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/users/users-page/users-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  users: {\n    method: 'GET',\n    url: urls.users,\n    response: data.users,\n  } as ApiRequestMock,\n  withoutUsers: {\n    method: 'GET',\n    url: urls.users,\n    response: [],\n  } as ApiRequestMock,\n}"
+            },
+            {
                 "name": "testInterceptor",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -2735,6 +2755,26 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "(mockedRequest: ApiRequestMock): void => {\n  throw new HttpErrorResponse({\n    error: mockedRequest.response,\n    statusText: mockedRequest.statusText,\n  });\n}"
+            },
+            {
+                "name": "urls",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/users/users-page/users-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  users: '/users',\n}"
+            },
+            {
+                "name": "usersPageMocks",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/users/users-page/users-page.mocks.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  data,\n  urls,\n  requests,\n}"
             },
             {
                 "name": "usersQuery",
@@ -3084,6 +3124,48 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "(mockedRequest: ApiRequestMock): void => {\n  throw new HttpErrorResponse({\n    error: mockedRequest.response,\n    statusText: mockedRequest.statusText,\n  });\n}"
+                }
+            ],
+            "src/app/users/users-page/users-page.mocks.ts": [
+                {
+                    "name": "data",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/users/users-page/users-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  users: [\n    {\n      name: 'Sari Dillway',\n      age: 82,\n      email: 'sdillway0@ft.com',\n      company: 'Apple',\n      title: 'Desktop Support Technician',\n      department: 'Accounting',\n      createdAt: '10/16/2023',\n      updatedAt: '8/14/2023',\n      id: '4d5b9a1d-597c-4d1e-82be-02757836b226',\n    },\n    {\n      name: 'Konstance Dawson',\n      age: 84,\n      email: 'kdawson1@sakura.ne.jp',\n      company: 'Microsoft',\n      title: 'Assistant Media Planner',\n      department: 'Human Resources',\n      createdAt: '8/1/2023',\n      updatedAt: '7/12/2023',\n      id: '1ff5416e-8634-4b84-b5e1-1e16042cc8d8',\n    },\n    {\n      name: 'Kalindi Wonfar',\n      age: 84,\n      email: 'kwonfar2@elegantthemes.com',\n      company: 'Apple',\n      title: 'Desktop Support Technician',\n      department: 'Marketing',\n      createdAt: '2/16/2023',\n      updatedAt: '1/14/2023',\n      id: '80350fd5-525c-4a08-bd96-3c49fcacab16',\n    },\n    {\n      name: 'Konstance Dawson',\n      age: 84,\n      email: 'kdawson1@sakura.ne.jp',\n      company: 'Microsoft',\n      title: 'Assistant Media Planner',\n      department: 'Human Resources',\n      createdAt: '8/1/2023',\n      updatedAt: '7/12/2023',\n      id: '1ff5416e-8634-4b84-b5e1-1e16042cc8d8',\n    },\n  ],\n}"
+                },
+                {
+                    "name": "requests",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/users/users-page/users-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  users: {\n    method: 'GET',\n    url: urls.users,\n    response: data.users,\n  } as ApiRequestMock,\n  withoutUsers: {\n    method: 'GET',\n    url: urls.users,\n    response: [],\n  } as ApiRequestMock,\n}"
+                },
+                {
+                    "name": "urls",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/users/users-page/users-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  users: '/users',\n}"
+                },
+                {
+                    "name": "usersPageMocks",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/users/users-page/users-page.mocks.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  data,\n  urls,\n  requests,\n}"
                 }
             ],
             "src/app/shared/ui/modal/modal.models.ts": [

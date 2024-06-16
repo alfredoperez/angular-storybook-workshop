@@ -15,7 +15,7 @@ import {
       class="flex items-center justify-between border-t border-gray-200 py-3 "
     >
       <div class="flex flex-1 justify-between sm:hidden">
-        <button class="btn btn-secondary btn-sm" (click)="goToPreviousPage()">
+        <button class="btn btn-primary  btn-sm" (click)="goToPreviousPage()">
           Previous
         </button>
         <button
