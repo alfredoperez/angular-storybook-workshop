@@ -17,11 +17,6 @@ const preview: Preview = {
       },
     },
     layout: 'centered',
-    options: {
-      storySort: {
-        order: ['Guides', '*'],
-      },
-    },
   },
   tags: ['autodocs'],
   decorators: [
