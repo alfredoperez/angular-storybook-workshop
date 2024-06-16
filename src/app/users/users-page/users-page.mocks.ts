@@ -46,6 +46,17 @@ const data = {
       updatedAt: '7/12/2023',
       id: '1ff5416e-8634-4b84-b5e1-1e16042cc8d8',
     },
+    ...Array.from({ length: 40 }, (_, i) => ({
+      name: `User ${i + 1}`,
+      age: Math.floor(Math.random() * 100),
+      email: `user${i + 1}@example.com`,
+      company: 'Microsoft',
+      title: 'Assistant Media Planner',
+      department: 'Human Resources',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      id: `${i + 1}`,
+    }))
   ],
 };
 
