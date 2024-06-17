@@ -1,0 +1,22 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Guides/Angular" />
+
+# Angular Guidelines
+
+Here you will find guidelines for writing Angular components and services.
+
+## Components
+
+### Do not use services with state in presentational components
+
+Presentational components should not have any dependencies on services. They should only receive data through inputs and emit events through outputs.
+
+#### Do Not
+
+```ts
+export class ButtonComponent {
+   state: inject(StateService)
+}
+```
+
