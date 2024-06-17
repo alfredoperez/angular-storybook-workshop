@@ -1,0 +1,37 @@
+import { Controls, Meta, Story, Title } from '@storybook/blocks';
+
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+<Title of={ButtonStories} />
+
+# Description
+
+The button component is a simple button that can be used to trigger actions in the application. It can be used to submit forms, navigate to a different page, or trigger any other action that requires user input.
+
+---
+
+# Behavior
+
+Clicking the button will trigger the `click` event. This event can be used to trigger actions in the application.
+
+
+## Primary
+
+There can be only one primary button on a page. It should be used to indicate the main action that the user should take on the page.
+
+<Story of={ButtonStories.Primary} />
+
+
+## Secondary
+
+Secondary buttons should be used for actions that are less important than the primary action. They should be used to indicate actions that are less important than the primary action.
+
+<Story of={ButtonStories.Secondary} />
+
+---
+
+# Inputs
+
+<Controls />

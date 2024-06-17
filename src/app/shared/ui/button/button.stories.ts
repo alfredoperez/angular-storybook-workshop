@@ -4,6 +4,7 @@ import { ButtonComponent } from './button.component';
 const meta: Meta<ButtonComponent> = {
   title: 'Shared/Components/Button',
   component: ButtonComponent,
+  tags: ["!autodocs"],
   render: (args) => ({
     props: args,
     template: `<ui-button ${argsToTemplate(args)}>Button!</ui-button>`,
